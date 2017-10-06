@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_marginBottom="10dp"
+              fresco:cardCornerRadius="10dp"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/profile_image"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.3"
+            fresco:roundedCornerRadius="5dp"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            />
+<TableLayout
+    android:layout_width="0dp"
+    android:layout_weight="0.7"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:text="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:text="@string/full_name"
+            android:layout_width="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:maxLines="3"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:text="@string/watchers_count"
+            android:layout_width="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/watcher_count"
+            android:layout_width="wrap_content"
+            android:textSize="15dp"
+
+            android:layout_height="wrap_content"
+            android:layout_column="1" />
+
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:text="@string/commit_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_column="1" />
+
+        <TextView
+            android:id="@+id/commit_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_column="1" />
+
+    </TableRow>
+</TableLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
