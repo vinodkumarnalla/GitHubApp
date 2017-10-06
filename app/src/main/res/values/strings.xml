@@ -6,8 +6,8 @@
     <string name="watchers_count">Watcher Count : </string>
     <string name="commit_count">Commit Count : </string>
     <string name="title_activity_repo_details">RepoDetails</string>
-    <string name="project_link">Project Link : </string>
-    <string name="desc">Description</string>
-    <string name="contributors">Contributors</string>
-    <string name="repos">Repo List</string>
+    <string name="project_link">Project Link :  </string>
+    <string name="desc">Description : </string>
+    <string name="contributors">Contributors : </string>
+    <string name="repos">Repo List : </string>
 </resources>

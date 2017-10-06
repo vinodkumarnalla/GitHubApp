@@ -12,12 +12,22 @@
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/profile_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         fresco:viewAspectRatio="2"
         android:layout_margin="5dp"
+        fresco:roundedCornerRadius="5dp"
         fresco:failureImage="@mipmap/ic_launcher"
         fresco:actualImageScaleType="center"
         fresco:placeholderImage="@mipmap/ic_launcher"
+        />
+    <TextView
+        android:text="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:id="@+id/full_name"
+        android:gravity="center"
+        android:textStyle="bold"
         />
     <TextView
         android:text="@string/repos"

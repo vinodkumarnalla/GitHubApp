@@ -14,16 +14,17 @@
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/profile_image"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:layout_margin="5dp"
-            android:layout_weight="0.3"
+            android:layout_weight="0.2"
             fresco:roundedCornerRadius="5dp"
             fresco:placeholderImage="@mipmap/ic_launcher"
             />
 <TableLayout
     android:layout_width="0dp"
-    android:layout_weight="0.7"
+    android:layout_weight="0.8"
     android:padding="5dp"
+    android:shrinkColumns="2"
     android:layout_height="wrap_content">
     <TableRow
         android:layout_width="fill_parent"
@@ -42,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15dp"
-            android:layout_column="1" />
+            android:layout_column="2" />
 
     </TableRow>
     <TableRow
@@ -63,7 +64,7 @@
             android:layout_height="wrap_content"
             android:textSize="15dp"
             android:maxLines="3"
-            android:layout_column="1" />
+            android:layout_column="2" />
 
     </TableRow>
     <TableRow
@@ -84,7 +85,7 @@
             android:textSize="15dp"
 
             android:layout_height="wrap_content"
-            android:layout_column="1" />
+            android:layout_column="2" />
 
     </TableRow>
     <TableRow
@@ -104,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15dp"
-            android:layout_column="1" />
+            android:layout_column="2" />
 
     </TableRow>
 </TableLayout>

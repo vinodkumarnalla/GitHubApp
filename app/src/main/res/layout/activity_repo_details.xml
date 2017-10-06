@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         fresco:viewAspectRatio="2"
         android:layout_margin="5dp"
+        fresco:roundedCornerRadius="5dp"
         fresco:failureImage="@mipmap/ic_launcher"
         fresco:actualImageScaleType="center"
         fresco:placeholderImage="@mipmap/ic_launcher"
@@ -21,6 +22,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:padding="10dp"
+        android:shrinkColumns="2"
         android:layout_height="wrap_content">
         <TableRow
             android:layout_width="fill_parent"
@@ -39,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:layout_column="1" />
+                android:layout_column="2" />
 
         </TableRow>
         <TableRow
@@ -59,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:layout_column="1" />
+                android:layout_column="2" />
 
         </TableRow>
         <TableRow
@@ -79,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:textSize="15dp"
                 android:layout_height="wrap_content"
-                android:layout_column="1" />
+                android:layout_column="2" />
 
         </TableRow>
 

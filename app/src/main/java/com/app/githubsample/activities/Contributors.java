@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 import com.app.githubsample.R;
 import com.app.githubsample.adapters.ReposListAdapter;
@@ -45,8 +46,10 @@ public class Contributors extends AppCompatActivity {
         llm.setReverseLayout(true);
         llm.setStackFromEnd(true);
         recycle_view.setLayoutManager(llm);
+        recycle_view.setHasFixedSize(true);
         if(getIntent()!=null&&getIntent().hasExtra("user")){
             com.app.githubsample.modals.Contributors user= (com.app.githubsample.modals.Contributors) getIntent().getExtras().get("user");
+            ((TextView)findViewById(R.id.full_name)).setText(user.getLogin());
             getRepos(user.getRepos_url());
             Uri uri = Uri.parse(user.getAvatar_url());
             imageView.setImageURI(uri);

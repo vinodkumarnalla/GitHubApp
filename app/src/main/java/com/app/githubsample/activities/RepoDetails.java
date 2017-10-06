@@ -37,6 +37,7 @@ public class RepoDetails extends AppCompatActivity implements OnClickListener {
     private ApiInterface apiService;
     private ArrayList<Contributors>list;
     private Repositories repo;
+    private ContributorsAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,8 @@ public class RepoDetails extends AppCompatActivity implements OnClickListener {
         list=new ArrayList<>();
         list.clear();
         recycle_view.setLayoutManager(new GridLayoutManager(this, 5, GridLayoutManager.VERTICAL, false));;
+        adapter=new ContributorsAdapter(list,  mOnClickListener);
+        recycle_view.setAdapter(adapter);
         imageView= (SimpleDraweeView) findViewById(R.id.profile_image);
         if(getIntent()!=null&&getIntent().hasExtra("repo")&&getIntent().hasExtra("owner")){
             repo= (Repositories) getIntent().getExtras().get("repo");
@@ -105,6 +108,7 @@ public class RepoDetails extends AppCompatActivity implements OnClickListener {
         }
     }
     private void getUsers(String Url){
+
         Call<List<Contributors>> call = apiService.getUsers(Url);
         call.enqueue(new Callback<List<Contributors>>() {
             @Override
@@ -112,7 +116,7 @@ public class RepoDetails extends AppCompatActivity implements OnClickListener {
                 if(response!=null&&response.body()!=null) {
                     list.clear();
                     list.addAll(response.body());
-                    recycle_view.setAdapter(new ContributorsAdapter(list,  mOnClickListener));
+                    adapter.notifyDataSetChanged();
 
                 }
             }
